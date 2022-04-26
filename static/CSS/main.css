@@ -1,7 +1,12 @@
-body {
-    margin: 0;
-}
 
-h1 {
-    color: red;
-}
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+    
+    
+
+    @media(max-width:900px){
+        main{
+            display: flex;
+            flex-direction: column;
+        }
+    }
