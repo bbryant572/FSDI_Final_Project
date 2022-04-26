@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home Page/No Account{% endblock title %}
+
+
+{% block content %}
+<div class="homepage">
+    <div class="homepage-contents">
+        <h4>This is the Home Page/No Account</h4>
+        <p>This is what the user first sees when they type in the url. They must create an account or login.</p>
+        <div class="image-header">
+            <img src="{% static 'img/heart.png'%}" alt="heart" class="heart-img">
+            <h5>Be Kind. Do Better.</h5>
+            <h3>We're in this together.</h3>
+        </div>
+        <div class="homepage-button-container">
+            <button class="homepage-button">Sign Up</button>
+            <span></span>
+            <button class="homepage-button">Login</button>
+        </div>   
+        <div class="homepage-icons">
+            <img src="{% static 'img/facebook.png'%}" alt="facebook" class="socials">
+            <img src="{% static 'img/twitter.png'%}" alt="facebook" class="socials">
+            <img src="{% static 'img/deviantart.png'%}" alt="facebook" class="socials">
+        </div>
+    </div>
+</div>
+{% endblock content %}
