@@ -91,7 +91,7 @@ span{
         width: 110px; 
         height: 30px;
         padding-top: 3px;
-        margin-left: 37%; 
+        margin-left: 43%; 
     }
     .homepage-icons{
         margin-top: 40px;
@@ -100,4 +100,9 @@ span{
         margin: 20px; 
     }
 
+}
+@media (max-width:768px){
+    .homepage-button{
+        margin-left: 36%; 
+    }
 }
