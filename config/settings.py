@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'accounts',
     'pages',
     'posts',
+    'store.apps.StoreConfig',
 ]
 
 MIDDLEWARE = [

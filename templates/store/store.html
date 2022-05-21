@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Store {% endblock title %}
+
+{% block content%}
+<h1>Welcome to the Store!</h1>
+<p>Here you will find art and photography for purchase!</p>
+<img src="{% static 'IMG/cart.png' %}">
+<a class="btn btn-primary" href="{% url 'cart' %}" role="button">Cart</a>
+{% endblock content %}
