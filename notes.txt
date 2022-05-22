@@ -1,0 +1,14 @@
+git checkout -b MilesBranch
+##Creates a new branch  named "MilesBranch"##
+git add  .
+git commit -m ""
+git push origin MilesBranch
+
+Go to GitHub and create a new pull request 
+
+git checkout main
+git merge origin MilesBranch
+**on GitHub your branch will be yellow  above files, click compare and pull request
+Click pull request 
+ click Merge pull request
+Confirm merge
