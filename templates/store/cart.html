@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Cart{% endblock title %}
+
+{% block content%}
+<h1>This is your Cart. You have "" items in your cart</h1>
+<img src="{% static 'IMG/cart.png' %}">
+<a class="btn btn-primary" href="{% url 'checkout' %}" role="button">Checkout</a>
+{% endblock content %}
