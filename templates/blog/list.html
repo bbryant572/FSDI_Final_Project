@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Photography{% endblock title %}
+
+{% block content %}
+<h1>Photography</h1>
+<h3>Click below to check out some art</h3>
+{% for post in post_list %}
+
+<div class="card" style="padding: 10; margin: 10px; width: 60%;">
+    <div class="card-body">
+        <h3>
+            <a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
+        </h3>
+        <h5 class="card-title">Post #{{ post.id }}</h5>
+        <small>Category: {{ post.theme }}</small>
+        <h6 class="card-subtitle mb-2 text-muted">{{ post.title }}</h6>
+        <p class="card-text">{{ post.text|truncatechars:512 }}</p>
+        <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">Continue Reading...</a> |
+    </div>
+</div>
+
+{% endfor %}
+{% endblock content %}
