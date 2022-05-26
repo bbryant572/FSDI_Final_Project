@@ -23,9 +23,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
+                    {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'main' %}">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'home_loggedin' %}">Home</a>   
                     </li>
+                    {% else %} 
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'home_firstpage' %}">Home</a>
+                    </li>
+                    {% endif %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'about' %}">About</a>
                     </li>

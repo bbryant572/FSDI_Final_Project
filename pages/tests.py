@@ -13,7 +13,7 @@ class SimpleTests(SimpleTestCase):
 
     def test_home_page_returns_correct_templates(self):
         response = self.client.get("/")
-        self.assertTemplateUsed(response, "index.html")
+        self.assertTemplateUsed(response, "home_firstpage.html")
         self.assertTemplateUsed(response, "base.html")
 
     def test_about_page_returns_correct_templates(self):

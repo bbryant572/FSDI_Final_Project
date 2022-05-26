@@ -1,0 +1,16 @@
+/* ABOUT PAGE */
+.about-me-header{
+    padding: 50px; 
+}
+.about-me-container{
+    display: flex; 
+    flex-direction: row;
+}
+.about-me-image img{
+    max-height: 200px;
+}
+.about-me-details{
+    background-color: rgba(255, 255, 255, 0.70);
+    color: black; 
+    max-width: 200px;
+}
