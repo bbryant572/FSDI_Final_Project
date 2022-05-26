@@ -15,9 +15,9 @@
             <h3>We're in this together.</h3>
         </div>
         <div class="homepage-button-container">
-            <button class="homepage-button">Sign Up</button>
+            <a href="{% url 'signup' %}"><button class="homepage-button">Sign Up</button></a>
             <span></span>
-            <button class="homepage-button">Login</button>
+            <a href="{% url 'login' %}"><button class="homepage-button">Login</button></a>
         </div>   
         <div class="homepage-icons">
             <img src="{% static 'img/facebook.png'%}" alt="facebook" class="socials">

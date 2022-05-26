@@ -8,6 +8,5 @@ class HomePageView(TemplateView):
 class AboutPageView(TemplateView):
     template_name = "about.html"
 
-
 class MainPageView(TemplateView):
     template_name = "home_loggedin.html"
