@@ -1,5 +1,6 @@
-{% block title%}Log In{% endblock title %}
+{% extends 'base.html' %}
 {% load static %}
+{% block title%}Log In{% endblock title %}
 
 {% block content %}
 <h1>Log In</h1>
@@ -8,5 +9,5 @@
     {{ form.as_p }}
     <input type="submit" value="Log In" class="btn btn-success">
 </form>
-<a class="btn btn-primary" href="{% url 'home' %}">Back</a>
+<a class="btn btn-primary" href="{% url 'home_firstpage' %}">Back</a>
 {% endblock content %}

@@ -2,7 +2,7 @@ from django.views.generic import TemplateView
 
 
 class HomePageView(TemplateView):
-    template_name = "index.html"
+    template_name = "home_firstpage.html"
 
 
 class AboutPageView(TemplateView):
@@ -10,4 +10,4 @@ class AboutPageView(TemplateView):
 
 
 class MainPageView(TemplateView):
-    template_name = "main.html"
+    template_name = "home_loggedin.html"
