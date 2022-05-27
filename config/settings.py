@@ -133,10 +133,7 @@ STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-<<<<<<< HEAD
 LOGIN_REDIRECT_URL = 'home_loggedin'
-=======
-LOGIN_REDIRECT_URL = 'main'
 
 GRAPHENE = {
     "SCHEMA": "mb.schema.schema"
@@ -144,4 +141,3 @@ GRAPHENE = {
 
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = ("http://localhost:8000",)
->>>>>>> main
