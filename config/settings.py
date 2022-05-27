@@ -133,7 +133,7 @@ STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = 'main'
+LOGIN_REDIRECT_URL = 'home_loggedin'
 
 GRAPHENE = {
     "SCHEMA": "mb.schema.schema"
