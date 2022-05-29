@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts',
+    # 'accounts',
+    # 'corsheaders',
+    # 'graphene_django',
     'mb',
     'pages',
     'posts',
@@ -45,6 +47,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    # 'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -130,4 +133,11 @@ STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = 'main'
+LOGIN_REDIRECT_URL = 'home_loggedin'
+
+# GRAPHENE = {
+#     "SCHEMA": "mb.schema.schema"
+# }
+
+# CORS_ORIGIN_ALLOW_ALL = False
+# CORS_ORIGIN_WHITELIST = ("http://localhost:8000",)

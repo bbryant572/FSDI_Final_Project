@@ -1,0 +1,58 @@
+.reg-header{
+    padding-top: 30px; 
+    color: rgba(255, 255, 255, 0.9); 
+}
+.reg-main{
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-left: 20%; 
+    margin-right: 20%; 
+    margin-top: 50px; 
+    padding: 5%; 
+    color: black; 
+    font-size: 20px;
+}
+.reg-main .btn{
+    background-color: black;
+    border: none; 
+    color: white; 
+    margin: 3px; 
+    margin-top: 20px; 
+    letter-spacing: 1.5px;
+}
+.reg-main .input-btn:hover{
+    background-color: rgb(3, 110, 3);
+    color: black; 
+}
+.reg-main .back-btn:hover{
+    background-color: red;
+    color: black; 
+}
+/* helptext is the class for the small text next to the input form boxes */
+.helptext::before{
+    /* content and whitespace adds a new line for smaller text */
+    content: "\A"; 
+    white-space: pre;
+}
+.helptext{
+    font-size: 10px;
+    border: none; 
+    display: inline-block;
+    margin-top: 0px;
+    padding: 0px; 
+    margin-bottom: -35px; 
+    color: rgb(116, 115, 115); 
+}
+.helptext:hover{
+    color: black; 
+    font-size: 15px;
+}
+.here-btn:hover{
+    color: white; 
+    background-color: black;
+    padding: 5px; 
+    border: 1px solid red; 
+}
+.here-btn{
+    text-decoration: none;
+    color: black; 
+}

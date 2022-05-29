@@ -1,11 +1,48 @@
 {% extends 'base.html' %}
 {% load static %}
-
+<!-- <link rel="stylesheet" href="{% static 'CSS/store.css' %}"> -->
 {% block title %}Store {% endblock title %}
 
 {% block content%}
 <h1>Welcome to the Store!</h1>
 <p>Here you will find art and photography for purchase!</p>
-<img src="{% static 'IMG/cart.png' %}">
+
+<div class="row">
+    <div class="col-lg-4">
+        <img class="thumbnail" src="{% static 'IMG/placeholder.png' %}">
+        <div class="box-element product">
+            <h6><strong>Product</strong></h6>
+            <hr>
+
+            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success" href="#">View</a>
+            <h4 style="display: inline-block; float: right"><strong>$20</strong></h4>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <img class="thumbnail" src="{% static 'IMG/placeholder.png' %}">
+        <div class="box-element product">
+            <h6><strong>Product</strong></h6>
+            <hr>
+
+            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success" href="#">View</a>
+            <h4 style="display: inline-block; float: right"><strong>$20</strong></h4>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <img class="thumbnail" src="{% static 'IMG/placeholder.png' %}">
+        <div class="box-element product">
+            <h6><strong>Product</strong></h6>
+            <hr>
+
+            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success" href="#">View</a>
+            <h4 style="display: inline-block; float: right"><strong>$20</strong></h4>
+        </div>
+    </div>
+</div>
 <a class="btn btn-primary" href="{% url 'cart' %}" role="button">Cart</a>
 {% endblock content %}
