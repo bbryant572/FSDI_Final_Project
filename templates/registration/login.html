@@ -4,13 +4,19 @@
 
 {% block content %}
 <div class="registration">
-    <h1>Log In</h1>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Log In" class="btn btn-dark">
-    </form>
-    <a class="btn btn-dark" href="{% url 'home_firstpage' %}">Back</a>
+    <div class="reg-box-container">
+        <div class="reg-header">
+            <h1>Log In</h1>
+        </div>
+        <div class="reg-main">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}  
+                <input type="submit" value="Log In" class="btn input-btn btn-dark">
+                <a class="btn back-btn btn-dark" href="{% url 'home_firstpage' %}">Back</a>
+            </form>
+        <div>
+    </div>
 </div>
 
 {% endblock content %}

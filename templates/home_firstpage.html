@@ -7,30 +7,16 @@
 {% block content %}
 <div class="homepage">
     <div class="homepage-contents">
-        <h4>This is the Home Page/No Account</h4>
-        <p>This is what the user first sees when they type in the url. They must create an account or login.</p>
         <div class="image-header">
             <img src="{% static 'IMG/heart.png'%}" alt="heart" class="heart-img">
             <h5>Be Kind. Do Better.</h5>
             <h3>We're in this together.</h3>
         </div>
         <div class="homepage-button-container">
-<<<<<<< HEAD
             <a href="{% url 'signup' %}"><button class="homepage-button">Sign Up</button></a>
             <span></span>
             <a href="{% url 'login' %}"><button class="homepage-button">Login</button></a>
         </div>   
-=======
-            <form action="{% url 'signup' %}">
-                <input class="homepage-button" type="submit" value="Signup" />
-            </form>
-
-            <form action="{% url 'login' %}">
-                <input class="homepage-button" type="submit" value="Login Page" />
-            </form>
-
-        </div>
->>>>>>> main
         <div class="homepage-icons">
             <img src="{% static 'IMG/facebook.png'%}" alt="facebook" class="socials">
             <img src="{% static 'IMG/twitter.png'%}" alt="facebook" class="socials">
