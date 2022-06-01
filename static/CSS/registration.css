@@ -1,3 +1,4 @@
+
 .reg-header{
     padding-top: 30px; 
     color: rgba(255, 255, 255, 0.9); 
@@ -11,6 +12,7 @@
     color: black; 
     font-size: 20px;
 }
+/* Buttons */
 .reg-main .btn{
     background-color: black;
     border: none; 
@@ -25,6 +27,16 @@
 }
 .reg-main .back-btn:hover{
     background-color: red;
+    color: black; 
+}
+.here-btn:hover{
+    color: white; 
+    background-color: black;
+    padding: 5px; 
+    border: 1px solid red; 
+}
+.here-btn{
+    text-decoration: none;
     color: black; 
 }
 /* helptext is the class for the small text next to the input form boxes */
@@ -46,13 +58,26 @@
     color: black; 
     font-size: 15px;
 }
-.here-btn:hover{
-    color: white; 
-    background-color: black;
-    padding: 5px; 
-    border: 1px solid red; 
+/* Password Warnings */
+.warning{
+    color: rgb(219, 0, 0); 
+    letter-spacing: 1.5;
+    word-spacing: 2;
+    margin-top: 15px; 
 }
-.here-btn{
+.pwd-change-mistake{
+    background-color: black;
+    border: 2px solid rgba(255, 0, 0, 0.6); 
+    margin-top: 20px; 
+    margin-right: 20%; 
+    margin-left: 20%; 
+    color: white; 
+    padding: 10px; 
+}
+.reg-main-pwd{
+    padding-bottom: 30px; 
+}
+.reg-main-pwd a{
     text-decoration: none;
     color: black; 
 }
