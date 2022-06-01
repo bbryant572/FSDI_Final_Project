@@ -1,9 +1,18 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title%}Logged Out{% endblock title %}
 
 {% block content %}
-<h1>Logged Out</h1>
-<p>Sorry to see you go. Come back soon!</p>
-<p>Click <a href="{% url 'home' %}">here </a>to go to the homepage.</p>
+<div class="registration">
+    <div class="reg-box-container">
+        <div class="reg-header">
+            <h1>Logged Out</h1>
+        </div>
+        <div class="reg-main">
+            <p>Sorry to see you go. Come back soon!</p>
+            <p>Click <a class="here-btn" href="{% url 'home_firstpage' %}">here </a>to go to the homepage.</p>
+        </div>
+    </div>
+</div>
 {% endblock content %}

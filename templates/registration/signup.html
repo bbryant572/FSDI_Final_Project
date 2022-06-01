@@ -1,11 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
 {% block title%}Sign Up{% endblock title %}
 
 {% block content %}
-<h1>Sign Up</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Sign Up" class="btn btn-success">
-</form>
-<a class="btn btn-primary" href="{% url 'home' %}">Back</a>
+<div class="registration">
+    <div class="reg-box-container">
+        <div class="reg-header">
+            <h1>Sign Up</h1> 
+        </div>
+        <div class="reg-main">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Sign Up" class="btn input-btn btn-dark">
+                <a class="btn back-btn btn-dark" href="{% url 'home_firstpage' %}">Back</a>
+            </form>
+        </div>
+        
+    </div> 
+</div>
+
 {% endblock content %}
