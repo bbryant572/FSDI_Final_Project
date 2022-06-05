@@ -2,14 +2,14 @@
 .about-me-header{
     padding: 30px; 
     padding-bottom: 40px; 
-    color: rgba(255, 255, 255, 0.9); 
+    color: rgba(255, 17, 0, 0.9); 
 }
 .about-me-container{
     display: flex; 
     flex-direction: row;
     padding-bottom: 50px; 
     padding-top: 50px; 
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 0, 0, 0.8);
     margin-right: 5%; 
     margin-left: 5%; 
     margin-bottom: 10px; 
