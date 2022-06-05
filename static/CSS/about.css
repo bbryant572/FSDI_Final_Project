@@ -10,20 +10,17 @@
     padding-bottom: 50px; 
     padding-top: 50px; 
     background-color: rgba(0, 0, 0, 0.8);
-    margin-right: 5%; 
-    margin-left: 5%; 
+    justify-content: center;
     margin-bottom: 10px; 
 }
 .about-me-image img{
     max-height: 400px;
-    margin-left: 28%;  
     box-shadow: 0px 0px 65px -20px rgba(255, 255, 255, 0.70);
 }
 .about-me-details{
     background-color: rgba(255, 255, 255, 0.85);
     color: black; 
-    margin-right: 8%; 
-    margin-left: 17%;
+    margin-left: 5%;
     width: 400px;  
     padding: 30px; 
 }
