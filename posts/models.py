@@ -1,3 +1,4 @@
+from tkinter import CASCADE
 from django.db import models
 from django.urls import reverse
 
@@ -11,3 +12,7 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('post_detail', args=[self.id])
+
+
+class Images(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
