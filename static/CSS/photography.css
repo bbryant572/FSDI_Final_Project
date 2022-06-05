@@ -1,9 +1,15 @@
 .cards {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
+    
+    
     
  }
  .card {
-        flex: 0 1 calc(25% - 1em);
+       box-sizing: border-box;
+       margin: 1rem .25em;
+       flex: 0 1 calc(25% - 1em);
+       
+        
  }
