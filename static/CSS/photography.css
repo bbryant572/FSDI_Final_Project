@@ -1,7 +1,8 @@
 .cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    
  }
  .card {
         flex: 0 1 calc(25% - 1em);
