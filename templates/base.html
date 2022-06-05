@@ -9,14 +9,15 @@
     <title>{% block title %}Final Project{% endblock title %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'CSS/main.css' %}">
     <link rel="stylesheet" href="{% static 'CSS/about.css' %}">
     <link rel="stylesheet" href="{% static 'CSS/homepage.css' %}">
     <link rel="stylesheet" href="{% static 'CSS/registration.css' %}">
     <link rel="stylesheet" href="{% static 'CSS/store.css' %}">
     <link rel="stylesheet" href="{% static 'CSS/photography.css' %}">
-    
+
 </head>
 
 <body>
@@ -30,9 +31,9 @@
                 <ul class="navbar-nav">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home_loggedin' %}">Home</a>   
+                        <a class="nav-link active" aria-current="page" href="{% url 'home_loggedin' %}">Home</a>
                     </li>
-                    {% else %} 
+                    {% else %}
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'home_firstpage' %}">Home</a>
                     </li>
@@ -70,16 +71,18 @@
         </div>
     </nav>
 
-    
-    
 
-    
+
+
+
     {% block content %}{% endblock content%}
     <footer class="footer">
         <h6>Website designed by Dream Team</h6>
     </footer>
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
