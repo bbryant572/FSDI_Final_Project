@@ -4,45 +4,83 @@
 {% block title %}Store {% endblock title %}
 
 {% block content%}
-<h1>Welcome to the Store!</h1>
-<p>Here you will find art and photography for purchase!</p>
-
-<div class="row">
-    <div class="col-lg-4">
-        <img class="thumbnail" src="{% static 'IMG/placeholder.png' %}">
-        <div class="box-element product">
-            <h6><strong>Product</strong></h6>
-            <hr>
-
-            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
-            <a class="btn btn-outline-success" href="#">View</a>
-            <h4 style="display: inline-block; float: right"><strong>$20</strong></h4>
-        </div>
+<div class="store">
+    <div class="store-header">
+        <h1>Welcome to the Store!</h1>
+        <p>Here you will find art and photography for purchase!</p>
     </div>
-
-    <div class="col-lg-4">
-        <img class="thumbnail" src="{% static 'IMG/placeholder.png' %}">
-        <div class="box-element product">
-            <h6><strong>Product</strong></h6>
-            <hr>
-
-            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
-            <a class="btn btn-outline-success" href="#">View</a>
-            <h4 style="display: inline-block; float: right"><strong>$20</strong></h4>
+    <a class="btn cart-btn btn-primary" href="{% url 'cart' %}" role="button">Cart</a>
+    <div class="store-container">
+        <div class="store-item">
+            <div class="store-item-image">
+                <img class="thumbnail" src="{% static 'IMG/placeholder.png' %}">
+            </div>
+            <div class="store-item-desc">
+                <h2>Item #1</h2>
+                <h3>Item Description</h3>
+                <h4>$20</h4>
+            </div>
+            <div class="add-cart">
+                <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+                <a class="btn btn-outline-primary" href="#">View</a>
+            </div>
         </div>
-    </div>
-
-    <div class="col-lg-4">
-        <img class="thumbnail" src="{% static 'IMG/placeholder.png' %}">
-        <div class="box-element product">
-            <h6><strong>Product</strong></h6>
-            <hr>
-
-            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
-            <a class="btn btn-outline-success" href="#">View</a>
-            <h4 style="display: inline-block; float: right"><strong>$20</strong></h4>
+        <div class="store-item">
+            <div class="store-item-image">
+                <img class="thumbnail" src="{% static 'IMG/placeholder.png' %}">
+            </div>
+            <div class="store-item-desc">
+                <h2>Item #2</h2>
+                <h3>Item Description</h3>
+                <h4>$20</h4>
+            </div>
+            <div class="add-cart">
+                <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+                <a class="btn btn-outline-primary" href="#">View</a>
+            </div>
+        </div>
+        <div class="store-item">
+            <div class="store-item-image">
+                <img class="thumbnail" src="{% static 'IMG/placeholder.png' %}">
+            </div>
+            <div class="store-item-desc">
+                <h2>Item #3</h2>
+                <h3>Item Description</h3>
+                <h4>$20</h4>
+            </div>
+            <div class="add-cart">
+                <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+                <a class="btn btn-outline-primary" href="#">View</a>
+            </div>
+        </div>
+        <div class="store-item">
+            <div class="store-item-image">
+                <img class="thumbnail" src="{% static 'IMG/placeholder.png' %}">
+            </div>
+            <div class="store-item-desc">
+                <h2>Item #4</h2>
+                <h3>Item Description</h3>
+                <h4>$20</h4>
+            </div>
+            <div class="add-cart">
+                <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+                <a class="btn btn-outline-primary" href="#">View</a>
+            </div>
+        </div>
+        <div class="store-item">
+            <div class="store-item-image">
+                <img class="thumbnail" src="{% static 'IMG/placeholder.png' %}">
+            </div>
+            <div class="store-item-desc">
+                <h2>Item #5</h2>
+                <h3>Item Description</h3>
+                <h4>$20</h4>
+            </div>
+            <div class="add-cart">
+                <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+                <a class="btn btn-outline-primary" href="#">View</a>
+            </div>
         </div>
     </div>
 </div>
-<a class="btn btn-primary" href="{% url 'cart' %}" role="button">Cart</a>
 {% endblock content %}
