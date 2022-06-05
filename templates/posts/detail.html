@@ -3,14 +3,16 @@
 {% block title %}{{ post.title }}{% endblock title %}
 
 {% block content %}
-<div class="centered">
-    <section class="cards">
-        <article class="card">
-           <p>content for card one</p>
-           Click <a href="{% url 'posts_list' %}">here</a> to go back to the list of posts.
-        </article><!-- /card-template -->
-        {% if user.is_authenticated %}
-        {% endif %}
-    </section>
+<div class="card" style="padding: 10; margin: 10px; width: 60%;">
+    <div class="card-body">
+        <h3>
+            <a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
+        </h3>
+        <h5 class="card-title">Post #{{ post.id }}</h5>
+        <small>Category: {{ post.theme }}</small>
+        <h6 class="card-subtitle mb-2 text-muted">{{ post.title }}</h6>
+        <p class="card-text">{{ post.text|truncatechars:512 }}</p>
+        <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">Continue Reading...</a> |
+    </div>
 </div>
 {% endblock content %}
