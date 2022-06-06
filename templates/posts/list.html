@@ -85,21 +85,6 @@
 
 
 
-<<<<<<< HEAD
-=======
-    <div class="card">
-        <div class="card-body profile">
-            <h3>
-                <a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
-            </h3>
-            <h5 class="card-title">Post #{{ post.id }}</h5>
-            <small>Category: {{ post.theme }}</small>
-            <h6 class="card-subtitle mb-2 text-muted">{{ post.title }}</h6>
-            <p class="card-text">{{ post.text|truncatechars:512 }}</p>
-            <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">Continue Reading...</a> |
-        </div>
-    </div>
->>>>>>> 87a95ad23a37ec149819b841d2ca85b847aea7c3
 
     {% endfor %}
     {% endblock content %}
