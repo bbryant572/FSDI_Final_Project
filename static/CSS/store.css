@@ -22,7 +22,7 @@
     overflow: hidden;
 }
 .store-item-image img{
-    margin: auto; 
+    max-height: 400px;
 }
 .store-item-desc{
     background-color: rgba(0, 0, 0, 0.5);
