@@ -1,4 +1,3 @@
-from tkinter import CASCADE
 from django.db import models
 from django.urls import reverse
 
@@ -16,3 +15,8 @@ class Post(models.Model):
 
 class Images(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='media/img')
+    title = models.CharField(max_length=255, unique=True)
+
+    def __str__(self):
+        return self.title

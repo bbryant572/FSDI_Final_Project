@@ -51,6 +51,11 @@
                 <a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
             </h3>
             <h5 class="card-title">Post #{{ post.id }}</h5>
+            {% for pic in image_img %}
+            <div class="item">
+                <img class="lazy" src="{{ pic.images.url }}" data-mfp-src="{{ pic.image.url }}">
+            </div>
+            {% endfor %}
             <small>Category: {{ post.theme }}</small>
             <h6 class="card-subtitle mb-2 text-muted">{{ post.title }}</h6>
             <p class="card-text">{{ post.text|truncatechars:512 }}</p>
