@@ -15,7 +15,7 @@ class PostListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['image_img'] = Images.objects.filter(self.)
+        context['image_img'] = Images.objects.all()
         return context
 
 
