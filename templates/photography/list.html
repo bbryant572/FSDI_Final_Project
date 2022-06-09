@@ -16,7 +16,7 @@
                 <ul class="navbar-nav">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'posts_list' %}">Flora</a>
+                        <a class="nav-link" href="{% url 'photography_list' %}">Flora</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'store' %}">Poetry/Writings</a>
@@ -41,12 +41,14 @@
 
     <h1>Photography</h1>
     <h3>Click below to check out some art</h3>
-    {% for post in post_list %}
+
+    {% for post in photography %}
 
     <div class="centered">
         <section class="cards">
             <article class="card">
                 <h2>Image 01</h2>
+
                 <p>TUX re-inventing the wheel, and move the needle. Feature creep dogpile that but diversify kpis but
                     market-facing.</p>
             </article><!-- /card-template -->
@@ -96,18 +98,18 @@
     <div class="card">
         <div class="card-body profile">
             <h3>
-                <a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
+                <a href="{% url 'photography_detail' post.id %}">{{ photography.title }}</a>
             </h3>
-            <h5 class="card-title">Post #{{ post.id }}</h5>
-            {% for pic in image_img %}
+            <h5 class="card-title">Post #{{ photography.id }}</h5>
+            {% for pic in photography %}
             <div class="item">
-                <img class="lazy" src="{{ pic.images.url }}" data-mfp-src="{{ pic.image.url }}">
+                <img class="lazy" src="{{ pic.image.url }}" src="{{ pic.image.url }}">
             </div>
             {% endfor %}
-            <small>Category: {{ post.theme }}</small>
-            <h6 class="card-subtitle mb-2 text-muted">{{ post.title }}</h6>
-            <p class="card-text">{{ post.text|truncatechars:512 }}</p>
-            <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">Continue Reading...</a> |
+            <small>Category: {{ photography.theme }}</small>
+            <h6 class="card-subtitle mb-2 text-muted">{{ photography.title }}</h6>
+            <p class="card-text">{{ photography.text|truncatechars:512 }}</p>
+            <a href="{% url 'photography_detail' post.id %}" class="btn btn-primary">Continue Reading...</a> |
         </div>
     </div>
 

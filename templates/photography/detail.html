@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ photography.title }}{% endblock title %}
+
+{% block content %}
+<div class="card" style="padding: 10; margin: 10px; width: 60%;">
+    <div class="card-body">
+        <h3>
+            <a href="{% url 'photography_detail' photography.id %}">{{ photography.title }}</a>
+        </h3>
+        <h5 class="card-title">Post #{{ photography.id }}</h5>
+        <small>Category: {{ photography.theme }}</small>
+        <h6 class="card-subtitle mb-2 text-muted">{{ photography.title }}</h6>
+        <p class="card-text">{{ photography.text|truncatechars:512 }}</p>
+        <a href="{% url 'photography_detail' photography.id %}" class="btn btn-primary">Continue Reading...</a> |
+    </div>
+</div>
+{% endblock content %}

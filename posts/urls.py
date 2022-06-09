@@ -10,11 +10,11 @@ from .views import (
 )
 
 urlpatterns = [
-    path('', PostListView.as_view(), name='posts_list'),
-    path('new/', PostCreateView.as_view(), name='post_new'),
-    path('<int:pk>/edit/', PostUpdateView.as_view(), name="post_edit"),
-    path('<int:pk>/delete/', PostDeleteView.as_view(), name="post_delete"),
+    path('', PostListView.as_view(), name='photography_list'),
+    path('<int:pk>/', PostDetailView.as_view(), name='photography_detail'),
+    path('new/', PostCreateView.as_view(), name='photography_new'),
+    path('<int:pk>/edit/', PostUpdateView.as_view(), name="photography_edit"),
+    path('<int:pk>/delete/', PostDeleteView.as_view(), name="photography_delete"),
 
-    path('<int:pk>/', PostDetailView.as_view(), name='post_detail'),
-] + static(settings.MEDIA_URL,
-           document_root=settings.MEDIA_ROOT)
+
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
