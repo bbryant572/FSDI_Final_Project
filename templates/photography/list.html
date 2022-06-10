@@ -42,7 +42,7 @@
     <h1>Photography</h1>
     <h3>Click below to check out some art</h3>
 
-    {% for post in photography %}
+    {% for post in post.images %}
 
     <div class="centered">
         <section class="cards">
@@ -101,9 +101,9 @@
                 <a href="{% url 'photography_detail' post.id %}">{{ photography.title }}</a>
             </h3>
             <h5 class="card-title">Post #{{ photography.id }}</h5>
-            {% for pic in photography %}
+            {% for post in post.images %}
             <div class="item">
-                <img class="lazy" src="{{ pic.image.url }}" src="{{ pic.image.url }}">
+                <img class="lazy" src="{{ post.images.url }}" src="{{ post.images.url }}">
             </div>
             {% endfor %}
             <small>Category: {{ photography.theme }}</small>
