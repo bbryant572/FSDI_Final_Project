@@ -15,6 +15,4 @@ urlpatterns = [
     path('new/', PostCreateView.as_view(), name='photography_new'),
     path('<int:pk>/edit/', PostUpdateView.as_view(), name="photography_edit"),
     path('<int:pk>/delete/', PostDeleteView.as_view(), name="photography_delete"),
-
-
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

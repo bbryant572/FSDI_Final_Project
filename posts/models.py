@@ -15,7 +15,7 @@ class Photography(models.Model):
 
 class Image(models.Model):
     Photography = models.ForeignKey(
-        Photography, related_name="image", on_delete=models.CASCADE)
+        Photography, related_name="image_img", on_delete=models.CASCADE)
     image = models.ImageField(upload_to='media/img')
     title = models.CharField(max_length=255, unique=True)
 

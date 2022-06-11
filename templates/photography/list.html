@@ -42,74 +42,21 @@
     <h1>Photography</h1>
     <h3>Click below to check out some art</h3>
 
-    {% for post in post.images %}
-
-    <div class="centered">
-        <section class="cards">
-            <article class="card">
-                <h2>Image 01</h2>
-
-                <p>TUX re-inventing the wheel, and move the needle. Feature creep dogpile that but diversify kpis but
-                    market-facing.</p>
-            </article><!-- /card-template -->
-            <article class="card">
-                <div class="card-content">
-                    <h2>Image 02</h2>
-                    <p>TUX re-inventing the wheel, and move the needle. Feature creep dogpile that but diversify kpis
-                        but market-facing.</p>
-                </div><!-- .card-content -->
-            </article><!-- /card-template -->
-            <article class="card">
-                <h2>Image 03</h2>
-                <p>TUX re-inventing the wheel, and move the needle. Feature creep dogpile that but diversify kpis but
-                    market-facing.</p>
-            </article><!-- /card-template -->
-            <article class="card">
-                <h2>Image 04</h2>
-                <p>TUX re-inventing the wheel, and move the needle. Feature creep dogpile that but diversify kpis but
-                    market-facing.</p>
-            </article><!-- /card-template -->
-            <article class="card">
-                <h2>Image 05</h2>
-                <p>TUX re-inventing the wheel, and move the needle. Feature creep dogpile that but diversify kpis but
-                    market-facing.</p>
-            </article><!-- /card-template -->
-            <article class="card">
-                <h2>Image 06</h2>
-                <p>TUX re-inventing the wheel, and move the needle. Feature creep dogpile that but diversify kpis but
-                    market-facing.</p>
-            </article><!-- /card-template -->
-            <article class="card">
-                <h2>Image 07</h2>
-                <p>TUX re-inventing the wheel, and move the needle. Feature creep dogpile that but diversify kpis but
-                    market-facing.</p>
-            </article><!-- /card-template -->
-            <article class="card">
-                <h2>Image 08</h2>
-                <p>TUX re-inventing the wheel, and move the needle. Feature creep dogpile that but diversify kpis but
-                    market-facing.</p>
-            </article><!-- /card-template -->
-
-        </section>
-    </div>
-
-
+    {% for image in image_img %}
 
     <div class="card">
         <div class="card-body profile">
             <h3>
-                <a href="{% url 'photography_detail' post.id %}">{{ photography.title }}</a>
+                <a href="{% url 'photography_detail' image.id %}">{{ image.title }}</a>
             </h3>
-            <h5 class="card-title">Post #{{ photography.id }}</h5>
-            {% for post in post.images %}
+            <h5 class="card-title">Post #{{ image.id }}</h5>
             <div class="item">
-                <img class="lazy" src="{{ post.images.url }}" src="{{ post.images.url }}">
+                <img class="lazy" src="{% static 'IMG/mushrooms.JPG'%}" height="300">
             </div>
-            {% endfor %}
-            <small>Category: {{ photography.theme }}</small>
-            <h6 class="card-subtitle mb-2 text-muted">{{ photography.title }}</h6>
-            <p class="card-text">{{ photography.text|truncatechars:512 }}</p>
-            <a href="{% url 'photography_detail' post.id %}" class="btn btn-primary">Continue Reading...</a> |
+            <h6 class="card-subtitle mb-2 text-muted">{{ image.title }}</h6>
+            <p class="card-text">{{ image.text|truncatechars:512 }}</p>
+            <a href="{% url 'photography_detail' image.id %}" class="btn btn-primary">Continue
+                Reading...</a> |
         </div>
     </div>
 

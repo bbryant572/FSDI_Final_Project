@@ -11,11 +11,14 @@ from .models import Photography, Image
 class PostListView(ListView):
     template_name = "photography/list.html"
     model = Image
-    context_object_name = 'photography'
+    image_img = Image.objects.all()
+    context_vars = {'image_img': image_img, }
+    # context_object_name = 'photography'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['image_img'] = Image.objects.all()
+        context.update(PostListView.context_vars)
+        # context['image_img'] = Image.objects.all()
         return context
 
 
