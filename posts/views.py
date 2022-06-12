@@ -10,7 +10,7 @@ from .models import Content, Image
 
 class PostListView(ListView):
     template_name = "photography/list.html"
-    model = Image
+    model = Content
     image_img = Image.objects.all()
     context_vars = {'image_img': image_img, }
     # context_object_name = 'photography'
