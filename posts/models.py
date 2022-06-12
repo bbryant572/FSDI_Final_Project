@@ -1,9 +1,8 @@
-from tkinter import CASCADE
 from django.db import models
 from django.urls import reverse
 
 
-class Post(models.Model):
+class Content(models.Model):
     title = models.CharField(max_length=128)
     text = models.TextField()
 
@@ -11,8 +10,14 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('post_detail', args=[self.id])
+        return reverse('content_detail', args=[self.id])
 
 
-class Images(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+class Image(models.Model):
+    Photography = models.ForeignKey(
+        Content, related_name="image_img", on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='media/img')
+    title = models.CharField(max_length=255, unique=True)
+
+    def __str__(self):
+        return self.title

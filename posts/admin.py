@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import Post
+from .models import Content, Image
 
-admin.site.register(Post)
+admin.site.register(Content)
+admin.site.register(Image)

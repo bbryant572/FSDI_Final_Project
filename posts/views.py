@@ -1,33 +1,51 @@
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import (
     CreateView,
-    UpdateView, 
+    UpdateView,
     DeleteView
 )
 from django.urls import reverse_lazy
-from .models import Post
+from .models import Content, Image
 
 
 class PostListView(ListView):
-    template_name = "posts/list.html"
-    model = Post
+    template_name = "photography/list.html"
+    model = Image
+    image_img = Image.objects.all()
+    context_vars = {'image_img': image_img, }
+    # context_object_name = 'photography'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context.update(PostListView.context_vars)
+        # context['image_img'] = Image.objects.all()
+        return context
 
 
 class PostDetailView(DetailView):
-    template_name = "posts/detail.html"
-    model = Post
+    template_name = "photography/detail.html"
+    model = Content
+    # context_object_name = 'posts'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['image_img'] = Image.objects.all()
+        return context
+
 
 class PostCreateView(CreateView):
-    template_name = "posts/new.html"
-    model = Post
+    template_name = "photography/new.html"
+    model = Content
     fields = ['title', 'text']
+
 
 class PostUpdateView(UpdateView):
-    template_name = "post/edit.html"
-    model = Post
+    template_name = "photography/edit.html"
+    model = Content
     fields = ['title', 'text']
 
+
 class PostDeleteView(DeleteView):
-    template_name = "post/delete.html"
-    model = Post
+    template_name = "photography/delete.html"
+    model = Content
     success_url = reverse_lazy('')

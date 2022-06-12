@@ -8,3 +8,4 @@
         modal.style.display = "none";
       }
     }
+
