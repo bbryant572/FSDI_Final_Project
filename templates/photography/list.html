@@ -47,7 +47,7 @@
     <div class="card">
         <div class="card-body profile">
             <h3>
-                <a href="{% url 'photography_detail' image.id %}">{{ image.title }}</a>
+                <a href="{% url 'content_detail' image.id %}">{{ image.title }}</a>
             </h3>
             <h5 class="card-title">Post #{{ image.id }}</h5>
             <div class="item">
@@ -55,7 +55,7 @@
             </div>
             <h6 class="card-subtitle mb-2 text-muted">{{ image.title }}</h6>
             <p class="card-text">{{ image.text|truncatechars:512 }}</p>
-            <a href="{% url 'photography_detail' image.id %}" class="btn btn-primary">Continue
+            <a href="{% url 'content_detail' image.id %}" class="btn btn-primary">Continue
                 Reading...</a> |
         </div>
     </div>

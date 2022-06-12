@@ -5,7 +5,7 @@ from django.views.generic.edit import (
     DeleteView
 )
 from django.urls import reverse_lazy
-from .models import Photography, Image
+from .models import Content, Image
 
 
 class PostListView(ListView):
@@ -24,7 +24,7 @@ class PostListView(ListView):
 
 class PostDetailView(DetailView):
     template_name = "photography/detail.html"
-    model = Photography
+    model = Content
     # context_object_name = 'posts'
 
     def get_context_data(self, **kwargs):
@@ -35,17 +35,17 @@ class PostDetailView(DetailView):
 
 class PostCreateView(CreateView):
     template_name = "photography/new.html"
-    model = Photography
+    model = Content
     fields = ['title', 'text']
 
 
 class PostUpdateView(UpdateView):
     template_name = "photography/edit.html"
-    model = Photography
+    model = Content
     fields = ['title', 'text']
 
 
 class PostDeleteView(DeleteView):
     template_name = "photography/delete.html"
-    model = Photography
+    model = Content
     success_url = reverse_lazy('')
