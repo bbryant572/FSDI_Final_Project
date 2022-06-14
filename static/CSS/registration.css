@@ -14,7 +14,16 @@
     margin-bottom: 17%;  
     align-items: center;
 }
-
+.registration-form{
+    display: flex; 
+    flex-direction: column;
+}
+.form-buttons{
+    flex-direction: row;
+    align-items: center;
+    max-width: 200px;
+    margin-left: 40%;
+}
 /* Buttons */
 .reg-main .btn{
     background-color: black;

@@ -57,9 +57,3 @@
     letter-spacing: 1.5px;
     word-spacing: 5px;
 }
-.about-me-contact:hover{
-    border: 2px solid red; 
-    color: white; 
-    background-color: black;
-    padding: 5px; 
-}

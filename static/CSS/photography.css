@@ -13,7 +13,6 @@
       flex: 0 1 calc(25% - 1em);
 }
 .photo-navbar{
-      background-color: rgba(0, 0, 0, 0.3);
       color: white; 
       line-height: 1; 
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
