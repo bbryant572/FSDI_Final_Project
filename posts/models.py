@@ -3,6 +3,10 @@ from django.urls import reverse
 
 
 class Content(models.Model):
+    FLORA = 'FL'
+    BEACH = 'BE'
+    ART = 'AR'
+    POETRY = 'PO'
     title = models.CharField(max_length=128)
     text = models.TextField()
     content = models.CharField(max_length=5000, null=True)
@@ -15,11 +19,12 @@ class Content(models.Model):
 
 
 class Image(models.Model):
+    # classification =
     image = models.ImageField(upload_to='media/img')
     caption = models.CharField(max_length=128, blank=True)
     title = models.CharField(max_length=255, unique=True)
     date_created = models.DateTimeField(auto_now_add=True, null=True)
-    photo = models.ForeignKey(
+    post_linked = models.ForeignKey(
         Content, related_name="image_img", on_delete=models.CASCADE, null=True)
 
     def __str__(self):
