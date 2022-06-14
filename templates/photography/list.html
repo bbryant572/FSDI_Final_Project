@@ -5,42 +5,38 @@
 {% block content %}
 
 <body>
+    <div class="photo-header">
+        <h1>Photography</h1>
+        <h3>Click below to check out some art</h3> 
+    </div>
+    
 
+<<<<<<< HEAD
     <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+=======
+    <nav class="navbar navbar-expand-lg navbar-dark photo-navbar">
+>>>>>>> a0a7f5240f1749c12dd5dd52ee12d2ed5868698a
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'content_list' %}">Flora</a>
+                <ul class="navbar-nav ">
+                    <li class="item">
+                        <a class="nav-link" href="#">All</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'store' %}">Poetry/Writings</a>
+                    <li class="item">
+                        <a class="nav-link" href="#">Flora</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'blog' %}">Beach</a>
+                    <li class="item">
+                        <a class="nav-link" href="#">Poetry/Writings</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'logout' %}">Art</a>
+                    <li class="item">
+                        <a class="nav-link" href="#">Beach</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'password_change' user.id %}">Account Info</a>
+                    <li class="item">
+                        <a class="nav-link" href="#">Art</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'password_change' user.id %}">Cart</a>
-                    </li>
-                    {% endif %}
                 </ul>
-            </div>
         </div>
     </nav> -->
 
-    <h1>Photography</h1>
-    <h3>Click below to check out some art</h3>
 
     <div class="container">
         <div class="row">

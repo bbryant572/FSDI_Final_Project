@@ -10,10 +10,16 @@
         </div>
         <div class="reg-main">
             <form method="POST">
-                {% csrf_token %}
-                {{ form.as_p }}  
-                <input type="submit" value="Log In" class="btn input-btn btn-dark">
-                <a class="btn back-btn btn-dark" href="{% url 'home_firstpage' %}">Back</a>
+                <div class="registration-form"
+                    <div class="reg-main">
+                        {% csrf_token %}
+                        {{ form.as_p }}  
+                    </div>
+                    <div class="form-buttons">
+                        <input type="submit" value="Log In" class="btn input-btn btn-dark">
+                        <a class="btn back-btn btn-dark" href="{% url 'home_firstpage' %}">Back</a>
+                    </div>
+                </div>
             </form>
         <div>
     </div>

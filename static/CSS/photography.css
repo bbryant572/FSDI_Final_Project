@@ -1,6 +1,11 @@
+.photo-header{
+      padding-top: 30px; 
+      color: rgba(255, 255, 255, 0.9); 
+}
 .cards {
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
     flex-wrap: wrap;
     
     
@@ -17,3 +22,32 @@
  .title_head {
        font-size: 50px;
  }
+=======
+    flex-wrap: wrap; 
+}
+.card {
+      box-sizing: border-box;
+      margin: 1rem .25em;
+      flex: 0 1 calc(25% - 1em);
+}
+.photo-navbar{
+      color: white; 
+      line-height: 1; 
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 0px;
+      padding-bottom: 1px; 
+      font-size: 18px;
+      margin-top: 2%;
+}
+.photo-navbar li{
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+      padding-right: 15px; 
+}
+.photo-filter-bar{
+      display: flex; 
+      list-style: none; 
+      margin-bottom: 0; 
+      padding-left: 0; 
+      flex-direction: column;
+}
+>>>>>>> a0a7f5240f1749c12dd5dd52ee12d2ed5868698a
