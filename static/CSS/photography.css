@@ -1,15 +1,35 @@
+.photo-header{
+      padding-top: 30px; 
+      color: rgba(255, 255, 255, 0.9); 
+}
 .cards {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    
-    
-    
- }
- .card {
-       box-sizing: border-box;
-       margin: 1rem .25em;
-       flex: 0 1 calc(25% - 1em);
-       
-        
- }
+    flex-wrap: wrap; 
+}
+.card {
+      box-sizing: border-box;
+      margin: 1rem .25em;
+      flex: 0 1 calc(25% - 1em);
+}
+.photo-navbar{
+      background-color: rgba(0, 0, 0, 0.3);
+      color: white; 
+      line-height: 1; 
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 0px;
+      padding-bottom: 1px; 
+      font-size: 18px;
+      margin-top: 2%;
+}
+.photo-navbar li{
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+      padding-right: 15px; 
+}
+.photo-filter-bar{
+      display: flex; 
+      list-style: none; 
+      margin-bottom: 0; 
+      padding-left: 0; 
+      flex-direction: column;
+}
