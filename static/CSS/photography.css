@@ -26,3 +26,10 @@
       border-right: 1px solid rgba(255, 255, 255, 0.2);
       padding-right: 15px; 
 }
+.photo-filter-bar{
+      display: flex; 
+      list-style: none; 
+      margin-bottom: 0; 
+      padding-left: 0; 
+      flex-direction: column;
+}
