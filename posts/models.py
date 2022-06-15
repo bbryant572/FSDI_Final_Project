@@ -13,6 +13,22 @@ class Content(models.Model):
     title = models.CharField(max_length=128, null=False, choices=CHOICES)
     text = models.TextField()
     content = models.CharField(max_length=5000, null=True)
+    photo = models.ImageField(upload_to='media/img', null=True, blank=True)
+    cover = models.FileField(upload_to='media/img', null=True, blank=True)
+
+    @property
+    def get_photo_url(self):
+        if self.photo and hasattr(self.photo, 'url'):
+            return self.photo.url
+        else:
+            return "/media/img/overlook1.JPG"
+
+    @property
+    def get_cover_url(self):
+        if self.cover and hasattr(self.cover, 'url'):
+            return self.cover.url
+        else:
+            return "/media/img/writings01.JPG"
 
     def __str__(self):
         return self.title

@@ -2,7 +2,7 @@
 .about-me-header{
     padding: 30px; 
     padding-bottom: 40px; 
-    color: rgba(255, 255, 255, 0.9); 
+    color: rgb(53, 231, 163);
 }
 .about-me-container{
     display: flex; 
