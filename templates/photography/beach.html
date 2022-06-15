@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ content.title }}{% endblock title %}
+
+
+{% block content %}
+
+{% for content in classification %}
+<div class="card" style="padding: 10; margin: 10px; width: 60%;">
+    <div class="card-body">
+        <h5 class="card-title">Post #{{ content.id }}</h5>
+        <small>Category: {{ content.content }}</small>
+        <h6 class="card-subtitle mb-2 text-muted">{{ content.title }}</h6>
+        <p class="card-text">{{ content.text|truncatechars:512 }}</p>
+    </div>
+</div>
+{% endfor %}
+{% endblock content %}

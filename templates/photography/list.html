@@ -7,33 +7,29 @@
 <body>
     <div class="photo-header">
         <h1>Photography</h1>
-        <h3>Click below to check out some art</h3> 
+        <h3>Click below to check out some art</h3>
     </div>
-    
 
-<<<<<<< HEAD
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-=======
-    <nav class="navbar navbar-expand-lg navbar-dark photo-navbar">
->>>>>>> a0a7f5240f1749c12dd5dd52ee12d2ed5868698a
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark photo-navbar">
         <div class="container-fluid">
-                <ul class="navbar-nav ">
-                    <li class="item">
-                        <a class="nav-link" href="#">All</a>
-                    </li>
-                    <li class="item">
-                        <a class="nav-link" href="#">Flora</a>
-                    </li>
-                    <li class="item">
-                        <a class="nav-link" href="#">Poetry/Writings</a>
-                    </li>
-                    <li class="item">
-                        <a class="nav-link" href="#">Beach</a>
-                    </li>
-                    <li class="item">
-                        <a class="nav-link" href="#">Art</a>
-                    </li>
-                </ul>
+            <ul class="navbar-nav ">
+                <li class="item">
+                    <a class="nav-link" href="#">All</a>
+                </li>
+                <li class="item">
+                    <a class="nav-link" href="#">Flora</a>
+                </li>
+                <li class="item">
+                    <a class="nav-link" href="#">Poetry/Writings</a>
+                </li>
+                <li class="item">
+                    <a class="nav-link" href="#">Beach</a>
+                </li>
+                <li class="item">
+                    <a class="nav-link" href="#">Art</a>
+                </li>
+            </ul>
         </div>
     </nav> -->
 
@@ -43,7 +39,7 @@
             <div class="col">
                 <p class="title_head">Flora</p>
                 <div class="item">
-                    <a href="">
+                    <a href="{% url 'flora_list' %}">
                         <img class="lazy" src="{% static 'IMG/mushrooms.JPG'%}" height="300">
                     </a>
                 </div>
@@ -51,7 +47,7 @@
             <div class="col">
                 <p class="title_head">Beach</p>
                 <div class="item">
-                    <a href="">
+                    <a href="{% url 'beach_list' %}">
                         <img class="lazy" src="{% static 'IMG/overlook1.JPG'%}" height="300">
                     </a>
                 </div>
@@ -59,7 +55,7 @@
             <div class="col">
                 <p class="title_head">Art</p>
                 <div class="item">
-                    <a href="">
+                    <a href="{% url 'art_list' %}">
                         <img class="lazy" src="{% static 'IMG/2022bench.JPG'%}" height="300">
                     </a>
                 </div>
@@ -67,7 +63,7 @@
             <div class="col">
                 <p class="title_head">Poetry/Writings</p>
                 <div class="item">
-                    <a href="">
+                    <a href="{% url 'poetry_list' %}">
                         <img class="lazy" src="{% static 'IMG/writings01.JPG'%}" height="300">
                     </a>
                 </div>
@@ -78,17 +74,14 @@
 
     <!-- <div class="card">
         <div class="card-body profile">
-            <h3>
-                <a href="{% url 'content_detail' content.id %}">{{ content.title }}</a>
-            </h3>
+            
             <h5 class="card-title">Post #{{ content.id }}</h5>
             <div class="item">
                 <img class="lazy" src="{% static 'IMG/mushrooms.JPG'%}" height="300">
             </div>
             <h6 class="card-subtitle mb-2 text-muted">{{ content.title }}</h6>
             <p class="card-text">{{ image.text|truncatechars:512 }}</p>
-            <a href="{% url 'content_detail' content.id %}" class="btn btn-primary">Continue
-                Reading...</a> |
+            
         </div>
     </div> -->
 

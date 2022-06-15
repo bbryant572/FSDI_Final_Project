@@ -3,11 +3,14 @@ from django.urls import reverse
 
 
 class Content(models.Model):
-    FLORA = 'FL'
-    BEACH = 'BE'
-    ART = 'AR'
-    POETRY = 'PO'
-    title = models.CharField(max_length=128)
+    CHOICES = (
+        ('flora', 'Flora'),
+        ('beach', 'Beach'),
+        ('art', 'Art'),
+        ('poetry', 'Poetry'),
+    )
+
+    title = models.CharField(max_length=128, null=False, choices=CHOICES)
     text = models.TextField()
     content = models.CharField(max_length=5000, null=True)
 
