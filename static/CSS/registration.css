@@ -69,11 +69,14 @@ input{
 }
 .helptext{
     font-size: 10px;
+    display: inline-block; 
     border: none; 
     margin-top: 0px;
     padding: 0px; 
     margin-bottom: -35px; 
     color: rgb(116, 115, 115); 
+    max-width: 300px;
+    margin-right: -40px; 
 }
 .helptext:hover{
     color: black; 
@@ -101,4 +104,16 @@ input{
 .reg-main-pwd a{
     text-decoration: none;
     color: black; 
+}
+.account-main{
+    font-size: 15px;
+    display: flex; 
+    flex-direction: column;
+    width: 70%; 
+}
+.account-buttons{
+    flex-direction: row;
+    align-items: center;
+    max-width: 300px;
+    margin-left: 45%;
 }

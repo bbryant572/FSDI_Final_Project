@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title%}User Profile{% endblock title %}
+
+{% block content %}
+<div class="user_profile">
+    <div class="registration">
+        <div class="reg-box-container">
+            <div class="reg-header">
+                <h1>Your Account:</h1> 
+            </div>
+            <div class="reg-main">
+                <div class="account-main">
+                    <form method="POST">
+                        <div class="account-form">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                        <div>
+                        <div class="account-buttons">
+                            <input type="submit" value="Update Account" class="btn input-btn btn-dark">
+                            <a class="btn back-btn btn-dark" href="{% url 'home_loggedin' %}">Back</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>
+{% endblock content %}
