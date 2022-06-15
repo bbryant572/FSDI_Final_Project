@@ -1,7 +1,8 @@
 from django.contrib.auth.forms import UserCreationForm
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from django.contrib.auth.views import PasswordChangeView, PasswordChangeDoneView
 from django.urls import reverse_lazy
+from .models import Account
 
 
 class SignUpView(CreateView):
@@ -16,3 +17,13 @@ class PasswordChangeView(PasswordChangeView):
 
 class PasswordChangeSuccessView(PasswordChangeDoneView):
     template_name = 'registration/password_change_done.html'
+
+class AccountUpdateView(UpdateView): 
+    template_name = 'registration/user_profile_update.html'
+    model = Account
+    fields = ['image', 'username', 'name', 'about']
+
+class AccountCreateView(CreateView): 
+    template_name = 'registration/user_profile.html'
+    model = Account
+    fields = ['image', 'username', 'name', 'about']

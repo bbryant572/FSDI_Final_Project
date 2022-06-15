@@ -4,7 +4,12 @@
 
 {% block content %}
 <div class="user_profile">
-    <h1>User Profile Here</h1>
+    <div>
+        <h1>User Name</h1>
+    </div>
+    <div> 
+        <h2>Update your account <a class="dropdown-item" href="{% url 'user_profile_update' user.id %}">here</a></h2>
+    </div>
 </div>
 
 {% endblock content %}
