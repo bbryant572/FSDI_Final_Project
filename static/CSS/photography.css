@@ -5,26 +5,19 @@
 .cards {
     display: flex;
     justify-content: space-between;
-<<<<<<< HEAD
     flex-wrap: wrap;
-    
-    
-    
  }
+
  .card {
        box-sizing: border-box;
        margin: 1rem .25em;
-       flex: 0 1 calc(25% - 1em);
-       
-        
+       flex: 0 1 calc(25% - 1em);   
  }
 
  .title_head {
-       font-size: 50px;
+       font-size: 30px;
+       color: white;
  }
-=======
-    flex-wrap: wrap; 
-}
 .card {
       box-sizing: border-box;
       margin: 1rem .25em;
@@ -50,4 +43,11 @@
       padding-left: 0; 
       flex-direction: column;
 }
->>>>>>> a0a7f5240f1749c12dd5dd52ee12d2ed5868698a
+
+.poetry_head {
+      margin-top: 20px;
+}
+
+.main_header {
+      color: rgb(53, 231, 163);
+}

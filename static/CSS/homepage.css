@@ -150,3 +150,7 @@ span{
     line-height: 2px; 
     font-size: 20px; 
 }
+
+.homepage_header {
+    color: rgb(53, 231, 163);
+}

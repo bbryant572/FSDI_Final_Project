@@ -8,8 +8,10 @@
 {% for content in classification %}
 <div class="card" style="padding: 10; margin: 10px; width: 60%;">
     <div class="card-body">
-        <h5 class="card-title">Post #{{ content.id }}</h5>
-        <small>Category: {{ content.content }}</small>
+        <h3 class="card-title">Post #{{ content.id }}</h3>
+        <img src="{{ content.get_cover_url }}" width="300px" height="300px" alt="flora">
+        <br>
+        <h5>{{ content.content }}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{ content.title }}</h6>
         <p class="card-text">{{ content.text|truncatechars:512 }}</p>
     </div>
