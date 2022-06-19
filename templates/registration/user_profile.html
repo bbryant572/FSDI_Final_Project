@@ -4,10 +4,20 @@
 
 {% block content %}
 <div class="user_profile">
-    <div>
-        <h1>User Name</h1>
+    <div class="user-header"> 
+        <div class="user-image">
+            <img src="{{user.get_image}}" alt="userimg" class="user-img">   
+        </div>
+        <div class="username">
+            <h1>{{user.get_username}}</h1>
+        </div>
+        <div>
+            <h2></h2>
+            <h2></h2>
+            <h2></h2>
+        </div>
     </div>
-    <div> 
+    <div class="user-main"> 
         <h2>Update your account <a class="dropdown-item" href="{% url 'user_profile_update' user.id %}">here</a></h2>
     </div>
 </div>
