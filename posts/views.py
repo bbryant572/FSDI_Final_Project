@@ -23,13 +23,57 @@ class PostListView(ListView):
 
 
 class PostDetailView(DetailView):
-    template_name = "photography/detail.html"
+    template_name = "photography/content_detail.html"
     model = Content
     # context_object_name = 'posts'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['image_img'] = Image.objects.all()
+        return context
+
+
+class FloraDetailView(ListView):
+    template_name = "photography/flora.html"
+    model = Content
+    context_object_name = 'posts'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['classification'] = Content.objects.filter(title='flora')
+        return context
+
+
+class BeachDetailView(ListView):
+    template_name = "photography/beach.html"
+    model = Content
+    # context_object_name = 'posts'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['classification'] = Content.objects.filter(title='beach')
+        return context
+
+
+class ArtDetailView(ListView):
+    template_name = "photography/art.html"
+    model = Content
+    # context_object_name = 'posts'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['classification'] = Content.objects.filter(title='art')
+        return context
+
+
+class PoetryDetailView(ListView):
+    template_name = "photography/writings.html"
+    model = Content
+    # context_object_name = 'posts'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['classification'] = Content.objects.filter(title='poetry')
         return context
 
 
