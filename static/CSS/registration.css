@@ -11,6 +11,18 @@
     padding: 5%; 
     color: black; 
     font-size: 20px;
+    margin-bottom: 17%;  
+    align-items: center;
+}
+.registration-form{
+    display: flex; 
+    flex-direction: column;
+}
+.form-buttons{
+    flex-direction: row;
+    align-items: center;
+    max-width: 200px;
+    margin-left: 40%;
 }
 /* Buttons */
 .reg-main .btn{
@@ -39,6 +51,16 @@
     text-decoration: none;
     color: black; 
 }
+label{
+    margin-left: 10%; 
+    float: left; 
+    width: 250px; 
+    text-align: right; 
+}
+input{
+    float: left; 
+    margin: 1%; 
+}
 /* helptext is the class for the small text next to the input form boxes */
 .helptext::before{
     /* content and whitespace adds a new line for smaller text */
@@ -47,12 +69,14 @@
 }
 .helptext{
     font-size: 10px;
+    display: inline-block; 
     border: none; 
-    display: inline-block;
     margin-top: 0px;
     padding: 0px; 
     margin-bottom: -35px; 
     color: rgb(116, 115, 115); 
+    max-width: 300px;
+    margin-right: -40px; 
 }
 .helptext:hover{
     color: black; 
@@ -80,4 +104,16 @@
 .reg-main-pwd a{
     text-decoration: none;
     color: black; 
+}
+.account-main{
+    font-size: 15px;
+    display: flex; 
+    flex-direction: column;
+    width: 70%; 
+}
+.account-buttons{
+    flex-direction: row;
+    align-items: center;
+    max-width: 300px;
+    margin-left: 45%;
 }

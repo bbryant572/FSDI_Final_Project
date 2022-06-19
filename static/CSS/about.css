@@ -2,7 +2,7 @@
 .about-me-header{
     padding: 30px; 
     padding-bottom: 40px; 
-    color: rgba(255, 17, 0, 0.9); 
+    color: rgba(255, 255, 255, 0.9); 
 }
 .about-me-container{
     display: flex; 
@@ -35,8 +35,8 @@
 .about-me-details a:hover{
     color: white; 
     background-color: black;
-    padding: 5px; 
     border: 1px solid red; 
+    padding: 0px; 
 }
 .about-icons{
     margin-top: 10px;
@@ -56,10 +56,4 @@
     padding: 1%;  
     letter-spacing: 1.5px;
     word-spacing: 5px;
-}
-.about-me-contact:hover{
-    border: 2px solid red; 
-    color: white; 
-    background-color: black;
-    padding: 5px; 
 }

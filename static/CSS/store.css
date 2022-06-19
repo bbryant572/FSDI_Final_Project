@@ -2,10 +2,7 @@
     padding-top: 30px; 
     color: rgba(255, 255, 255, 0.9); 
 }
-.cart-btn{
-    margin: 2%; 
-    background-color: black;
-}
+
 .store-container{
     display: flex; 
     flex-direction: row;

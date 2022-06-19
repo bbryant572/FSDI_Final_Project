@@ -43,19 +43,10 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'posts_list' %}">Photography</a>
+                        <a class="nav-link" href="{% url 'content_list' %}">Photography</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'store' %}">Store</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'blog' %}">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'password_change' user.id %}">Password Change</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
@@ -65,9 +56,28 @@
                         <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
                     </li>
                     {% endif %}
-                    
                 </ul>
+                {% if user.is_authenticated %}
+                <ul class="login-settings">
+                    <li class="btn-group dropstart">
+                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            ⚙️
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'user_profile' user.id %}">Account Settings</a></li>
+                            <li><a class="dropdown-item" href="{% url 'password_change' user.id %}">Password Change</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'logout' %}">Log Out</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="btn cart-btn btn-primary" href="{% url 'cart' %}" role="button">Cart</a>
+                    </li> 
+                </ul>
+                {% endif %}
             </div>
+            </ul>
+        </div>
         </div>
     </nav>
 

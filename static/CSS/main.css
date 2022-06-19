@@ -22,10 +22,28 @@ nav{
 .navbar li{
     padding-left: 20px; 
 }
+.login-settings{
+    display: flex; 
+    flex-direction: row;
+    float: right;
+    list-style: none;
+    position: relative;
+    margin-bottom: 0;
+    margin-left: auto; 
+}
+.dropdown-toggle{
+    padding-top: 15%; 
+}
+.dropdown-menu{
+    border-radius: 0;
+}
+.cart-btn{
+    background-color: black;
+}
 .footer{
     background-color: rgba(255, 255, 255, 0.6);
     padding-top: 20px;
     padding-bottom: 18px;
-    margin-top: 500px;
+    margin-top: 50px;
     color: black; 
 }
