@@ -43,6 +43,8 @@
       padding-left: 0; 
       flex-direction: column;
 }
+<<<<<<< HEAD
+=======
 
 .poetry_head {
       margin-top: 20px;
@@ -51,3 +53,4 @@
 .main_header {
       color: rgb(53, 231, 163);
 }
+>>>>>>> 6c3af2f617c198decfad79b02df1124a475ea8ae

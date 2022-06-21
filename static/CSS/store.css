@@ -2,7 +2,10 @@
     padding-top: 30px; 
     color: rgba(255, 255, 255, 0.9); 
 }
-
+.store-header h1{
+    max-width: 80%;
+    margin-left: 10%;
+}
 .store-header-main {
     color: rgb(53, 231, 163);
 }
@@ -40,4 +43,10 @@
 }
 .store-item-desc h4{
     font-size: 15px;
+}
+.cart-checkout{
+    margin-top: 5%;
+}
+.cart-checkout img{
+    max-height: 60px;
 }

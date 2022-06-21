@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="{% static 'CSS/registration.css' %}">
     <link rel="stylesheet" href="{% static 'CSS/store.css' %}">
     <link rel="stylesheet" href="{% static 'CSS/photography.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/cart.css' %}">
+
 
 </head>
 
@@ -65,8 +67,7 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{% url 'user_profile' user.id %}">Account Settings</a></li>
-                            <li><a class="dropdown-item" href="{% url 'password_change' user.id %}">Password Change</a>
-                            </li>
+                            <li><a class="dropdown-item" href="{% url 'password_change' user.id %}">Password Change</a></li>
                             <li><a class="dropdown-item" href="{% url 'logout' %}">Log Out</a></li>
                         </ul>
                     </li>
