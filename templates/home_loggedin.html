@@ -11,67 +11,15 @@
         <div class="reg-header">
             <h1 class="homepage_header">Welcome to your home page, {{ user.get_username }}!</h1>
         </div>
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{% static 'IMG/overlook1.JPG'%}" height="500" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'IMG/sky1.JPG'%}" height="500" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'IMG/trees1.JPG'%}" height="500" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+        <div class="map-header">
+            <img src="{% static 'IMG/beaches_map.jpeg'%}" alt="palm tree" class="tree-img">
         </div>
         <div class="homepage-main">
-            <div class="homepage-highlights">
-                <h5> First Section </h5>
-            </div>
-            <div class="home-image-header">
-                <img src="{% static 'IMG/heart.png'%}" alt="heart" class="heart-img">
-                <h5>Be Kind. Do Better.</h5>
-                <h3>We're in this together.</h3>
+            <div class="homepage-image">
+                <img src="{% static 'IMG/palm_tree.png'%}" alt="palm tree" class="tree-img">
             </div>
             <div class="homepage-sections">
-                <div class="homepage-cart">
-                    <h5> This is your last order: </h5>
-                    <h5> Here are the items that you liked: </h5>
-                </div>
-                <div class="homepage-account">
-                    <h5> Click here to update your account: </h5>
-                    <h5> Your last update was on: </h5>
-                </div>
+                <img src="{% static 'IMG/visit_graph.jpeg'%}" alt="graph" class="graph-img">
             </div>
         </div>
     </div>

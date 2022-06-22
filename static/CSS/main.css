@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
     text-align: center;
     margin: 0;
     min-height: 500px;
-    font-family: 'Special Elite', cursive;
-    background: black url(https://images.pexels.com/photos/7538746/pexels-photo-7538746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) repeat local 0 0;
+    font-family: 'Playfair Display', serif;
+    background: black url(https://images.pexels.com/photos/9366366/pexels-photo-9366366.jpeg) no-repeat fixed 0 0;
+    background-size: cover;
 }
 input{
     border-radius: 0;
