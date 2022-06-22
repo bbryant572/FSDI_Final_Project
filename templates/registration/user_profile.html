@@ -16,9 +16,11 @@
             <h2>Email: {{user.account.email}}</h2>
             <h2>About: {{user.account.about}}</h2>
         </div>
-    </div>
-    <div class="user-main">
-        <h2>Update your account <a class="dropdown-item" href="{% url 'user_profile_update' user.id %}">here</a></h2>
+        <div class="user-main">
+            <h2>Update your account <a class="btn btn-info"
+                    href="{% url 'user_profile_update' user.account.id %}">here</a>
+            </h2>
+        </div>
     </div>
 </div>
 

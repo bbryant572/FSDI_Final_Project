@@ -4,10 +4,10 @@ from django.urls import reverse
 
 class Content(models.Model):
     CHOICES = (
-        ('flora', 'Flora'),
-        ('beach', 'Beach'),
-        ('art', 'Art'),
-        ('poetry', 'Poetry'),
+        ('playas del Coco', 'Playas del Coco'),
+        ('playa ocotal', 'Playa Ocotal'),
+        ('playa hermosa', 'Playa Hermosa'),
+        ('marino ballena', 'Marino Ballena'),
     )
 
     title = models.CharField(max_length=128, null=False, choices=CHOICES)

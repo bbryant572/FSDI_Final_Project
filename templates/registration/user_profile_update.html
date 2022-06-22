@@ -7,7 +7,7 @@
     <div class="registration">
         <div class="reg-box-container">
             <div class="reg-header">
-                <h1>Your Account:</h1> 
+                <h1>Your Account:</h1>
             </div>
             <div class="reg-main">
                 <div class="account-main">
@@ -15,15 +15,19 @@
                         <div class="account-form">
                             {% csrf_token %}
                             {{ form.as_p }}
-                        <div>
-                        <div class="account-buttons">
-                            <input type="submit" value="Update Account" class="btn input-btn btn-dark">
-                            <a class="btn back-btn btn-dark" href="{% url 'home_loggedin' %}">Back</a>
-                        </div>
+                            <div>
+                                <div class="account-buttons">
+                                    <input type="submit" value="Update Account" class="btn input-btn btn-dark">
+                                    <br>
+                                    <a class="btn back-btn btn-dark" href="{% url 'password_change' %}">Change
+                                        Password</a>
+                                    <a class="btn back-btn btn-dark" href="{% url 'home_loggedin' %}">Back</a>
+                                </div>
+                            </div>
                     </form>
                 </div>
             </div>
-        </div> 
+        </div>
     </div>
 </div>
 {% endblock content %}
