@@ -3,24 +3,24 @@
 {% block title%}User Profile{% endblock title %}
 
 {% block content %}
+
+
+
 <div class="user_profile">
-    <div class="user-header"> 
+    <div class="user-header">
         <div class="user-image">
-            <img src="{{user.get_image}}" alt="userimg" class="user-img">   
+            <img src="{{user.account.get_image_url}}" width="200px" alt="userimg" class="user-img">
         </div>
         <div class="username">
-            <h1>{{user.get_username}}</h1>
+            <h1>Username: {{user.get_username}}</h1>
+            <h2>Email: {{user.account.email}}</h2>
+            <h2>About: {{user.account.about}}</h2>
         </div>
-        
     </div>
-    <div class="user-details">
-            <h2>{{account.name}}</h2>
-            <h2>{{user.get_about}}</h2>
-            <h2> Test test</h2>
-    </div>
-    <div class="user-main"> 
+    <div class="user-main">
         <h2>Update your account <a class="dropdown-item" href="{% url 'user_profile_update' user.id %}">here</a></h2>
     </div>
 </div>
+
 
 {% endblock content %}

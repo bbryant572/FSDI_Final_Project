@@ -18,12 +18,21 @@ class PasswordChangeView(PasswordChangeView):
 class PasswordChangeSuccessView(PasswordChangeDoneView):
     template_name = 'registration/password_change_done.html'
 
-class AccountUpdateView(UpdateView): 
+
+class AccountUpdateView(UpdateView):
     template_name = 'registration/user_profile_update.html'
     model = Account
-    fields = ['image', 'username', 'name', 'about']
+    fields = ['image', 'username', 'email', 'about']
 
-class AccountCreateView(CreateView): 
+
+class AccountCreateView(CreateView):
     template_name = 'registration/user_profile.html'
     model = Account
-    fields = ['image', 'username', 'name', 'about']
+    fields = ['image', 'username', 'email', 'about']
+
+    def get_context_data(self, **kwargs):
+        print("asdasdasd")
+        context = super().get_context_data(**kwargs)
+        context['test'] = "Works"
+        print(context)
+        return context
