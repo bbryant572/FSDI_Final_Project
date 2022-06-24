@@ -1,11 +1,66 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}checkout{% endblock title %}
+{% block title %}Checkout{% endblock title %}
 
 {% block content%}
-<div class="store-header">
-    <h1>Checkout</h1>
-    <p>Please fill out information and select the pay now button below.</p>
-</div>
+<div class="card-contain">
+    <div class="CartContainer">
+        <div class="cart-header">
+            <h3 class="cart-heading">Checkout</h3>
+            <h5 class="cart-action">Remove all</h5>
+        </div>
+
+        <div class="cart-items-sub">
+              <div class="image-box">
+                <img src="" alt="">
+              </div>
+              <div class="cart-about">
+                  <h1 class="cart-title">Photography</h1>
+                  <h3 class="cart-subtitle">Flora</h3>
+              </div>
+              <div class="cart-counter">
+                <div class="cart-btn-main">+</div>
+                <div class="cart-count">1</div>
+                <div class="cart-btn-main">-</div>
+              </div>
+              <div class="cart-prices">
+                  <div class="cart-amount">$2.99</div>
+                  <div class="cart-save"><u>Save for later</u></div>
+                  <div class="cart-remove"><u>Remove</u></div>
+              </div>
+        </div>
+
+        <div class="cart-items-sub pad">
+              <div class="image-box">
+                <img src="" alt="">
+              </div>
+              <div class="cart-about">
+                  <h1 class="cart-title">Photography</h1>
+                  <h3 class="cart-subtitle">Beach</h3>
+              </div>
+              <div class="cart-counter">
+                  <div class="cart-btn-main">+</div>
+                  <div class="cart-count">1</div>
+                  <div class="cart-btn-main">-</div>
+              </div>
+              <div class="cart-prices">
+                  <div class="cart-amount">$3.19</div>
+                  <div class="cart-save"><u>Save for later</u></div>
+                  <div class="cart-remove"><u>Remove</u></div>
+              </div>
+        </div>
+      <hr> 
+      <div class="checkout">
+      <div class="main-cart-total">
+          <div>
+              <div class="cart-subtotal">Sub-Total</div>
+              <div class="cart-subtotal-items">2 items</div>
+          </div>
+          <div class="cart-total-amount">$6.18</div>
+      </div>
+      <button class="btn cart-btn btn-primary">Pay Now</button></div>
+ </div>
+ </div>
+   
 {% endblock content %}
