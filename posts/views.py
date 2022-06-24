@@ -59,7 +59,7 @@ class CocoDetailView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['classification'] = Content.objects.filter(
-            title='playas del coco')
+            title='playas del Coco')
         return context
 
 
