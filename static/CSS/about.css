@@ -1,8 +1,9 @@
 /* ABOUT PAGE */
 .about-me-header{
-    padding: 30px; 
+    padding: 30px;
+    font-size: 48px; 
     padding-bottom: 40px; 
-    color: rgb(53, 231, 163);
+    color: black;
 }
 .about-me-container{
     display: flex; 

@@ -8,8 +8,8 @@ from django.urls import reverse_lazy
 from .models import Content, Image
 
 
-class PostListView(ListView):
-    template_name = "photography/list.html"
+class BeachListView(ListView):
+    template_name = "beaches/list.html"
     model = Content
     image_img = Image.objects.all()
     context_vars = {'image_img': image_img, }
@@ -17,13 +17,13 @@ class PostListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context.update(PostListView.context_vars)
+        context.update(BeachListView.context_vars)
         # context['image_img'] = Image.objects.all()
         return context
 
 
-class PostDetailView(DetailView):
-    template_name = "photography/content_detail.html"
+class BeachDetailView(DetailView):
+    template_name = "beaches/content_detail.html"
     model = Content
     # context_object_name = 'posts'
 
@@ -33,63 +33,67 @@ class PostDetailView(DetailView):
         return context
 
 
-class FloraDetailView(ListView):
-    template_name = "photography/flora.html"
+class BeachCreateView(CreateView):
+    template_name = "beaches/new.html"
+    model = Content
+    fields = ['title', 'text']
+
+
+class BeachUpdateView(UpdateView):
+    template_name = "beaches/edit.html"
+    model = Content
+    fields = ['title', 'text']
+
+
+class BeachDeleteView(DeleteView):
+    template_name = "beaches/delete.html"
+    model = Content
+    success_url = reverse_lazy('')
+
+
+class CocoDetailView(ListView):
+    template_name = "beaches/coco.html"
     model = Content
     context_object_name = 'posts'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['classification'] = Content.objects.filter(title='flora')
+        context['classification'] = Content.objects.filter(
+            title='playas del coco')
         return context
 
 
-class BeachDetailView(ListView):
-    template_name = "photography/beach.html"
+class OcotalDetailView(ListView):
+    template_name = "beaches/ocotal.html"
     model = Content
     # context_object_name = 'posts'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['classification'] = Content.objects.filter(title='beach')
+        context['classification'] = Content.objects.filter(
+            title='playa ocotal')
         return context
 
 
-class ArtDetailView(ListView):
-    template_name = "photography/art.html"
+class HermosaDetailView(ListView):
+    template_name = "beaches/hermosa.html"
     model = Content
     # context_object_name = 'posts'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['classification'] = Content.objects.filter(title='art')
+        context['classification'] = Content.objects.filter(
+            title='playa hermosa')
         return context
 
 
-class PoetryDetailView(ListView):
-    template_name = "photography/writings.html"
+class BallenaDetailView(ListView):
+    template_name = "beaches/ballena.html"
     model = Content
     # context_object_name = 'posts'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['classification'] = Content.objects.filter(title='poetry')
+        context['classification'] = Content.objects.filter(
+            title='marino ballena')
         return context
-
-
-class PostCreateView(CreateView):
-    template_name = "photography/new.html"
-    model = Content
-    fields = ['title', 'text']
-
-
-class PostUpdateView(UpdateView):
-    template_name = "photography/edit.html"
-    model = Content
-    fields = ['title', 'text']
-
-
-class PostDeleteView(DeleteView):
-    template_name = "photography/delete.html"
-    model = Content
-    success_url = reverse_lazy('')
