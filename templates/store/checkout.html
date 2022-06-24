@@ -4,63 +4,115 @@
 {% block title %}Checkout{% endblock title %}
 
 {% block content%}
-<div class="card-contain">
-    <div class="CartContainer">
-        <div class="cart-header">
-            <h3 class="cart-heading">Checkout</h3>
-            <h5 class="cart-action">Remove all</h5>
-        </div>
-
-        <div class="cart-items-sub">
-              <div class="image-box">
-                <img src="" alt="">
-              </div>
-              <div class="cart-about">
-                  <h1 class="cart-title">Photography</h1>
-                  <h3 class="cart-subtitle">Flora</h3>
-              </div>
-              <div class="cart-counter">
-                <div class="cart-btn-main">+</div>
-                <div class="cart-count">1</div>
-                <div class="cart-btn-main">-</div>
-              </div>
-              <div class="cart-prices">
-                  <div class="cart-amount">$2.99</div>
-                  <div class="cart-save"><u>Save for later</u></div>
-                  <div class="cart-remove"><u>Remove</u></div>
-              </div>
-        </div>
-
-        <div class="cart-items-sub pad">
-              <div class="image-box">
-                <img src="" alt="">
-              </div>
-              <div class="cart-about">
-                  <h1 class="cart-title">Photography</h1>
-                  <h3 class="cart-subtitle">Beach</h3>
-              </div>
-              <div class="cart-counter">
-                  <div class="cart-btn-main">+</div>
-                  <div class="cart-count">1</div>
-                  <div class="cart-btn-main">-</div>
-              </div>
-              <div class="cart-prices">
-                  <div class="cart-amount">$3.19</div>
-                  <div class="cart-save"><u>Save for later</u></div>
-                  <div class="cart-remove"><u>Remove</u></div>
-              </div>
-        </div>
-      <hr> 
-      <div class="checkout">
-      <div class="main-cart-total">
-          <div>
-              <div class="cart-subtotal">Sub-Total</div>
-              <div class="cart-subtotal-items">2 items</div>
+<div class='container'>
+    <div class='window'>
+      <div class='order-info'>
+        <div class='order-info-content'>
+          <h2>Order Summary</h2>
+                  <div class='line'></div>
+          <table class='order-table'>
+            <tbody>
+              <tr>
+                <td><img src='https://dl.dropboxusercontent.com/s/sim84r2xfedj99n/%24_32.JPG' class='full-width'></img>
+                </td>
+                <td>
+                  <br> <span class='thin'>Nike</span>
+                  <br> Free Run 3.0 Women<br> <span class='thin small'> Color: Grey/Orange, Size: 10.5<br><br></span>
+                </td>
+  
+              </tr>
+              <tr>
+                <td>
+                  <div class='price'>$99.95</div>
+                </td>
+              </tr>
+            </tbody>
+  
+          </table>
+          <div class='line'></div>
+          <table class='order-table'>
+            <tbody>
+              <tr>
+                <td><img src='https://dl.dropboxusercontent.com/s/qbj9tsbvthqq72c/Vintage-20L-Backpack-by-Fj%C3%A4llr%C3%A4ven.jpg' class='full-width'></img>
+                </td>
+                <td>
+                  <br> <span class='thin'>Fjällräven</span>
+                  <br>Vintage Backpack<br> <span class='thin small'> Color: Olive, Size: 20L</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class='price'>$235.95</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class='line'></div>
+          <table class='order-table'>
+            <tbody>
+              <tr>
+                <td><img src='https://dl.dropboxusercontent.com/s/nbr4koso8dpoggs/6136C1p5FjL._SL1500_.jpg' class='full-width'></img>
+                </td>
+                <td>
+                  <br> <span class='thin'>Monobento</span>
+                  <br>Double Lunchbox<br> <span class='thin small'> Color: Pink, Size: Medium</span>
+                </td>
+  
+              </tr>
+              <tr>
+                <td>
+                  <div class='price'>$25.95</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class='line'></div>
+          <div class='total'>
+            <span style='float:left;'>
+              <div class='thin dense'>VAT 19%</div>
+              <div class='thin dense'>Delivery</div>
+              TOTAL
+            </span>
+            <span style='float:right; text-align:right;'>
+              <div class='thin dense'>$68.75</div>
+              <div class='thin dense'>$4.95</div>
+              $435.55
+            </span>
           </div>
-          <div class="cart-total-amount">$6.18</div>
-      </div>
-      <button class="btn cart-btn btn-primary">Pay Now</button></div>
- </div>
- </div>
-   
+  </div>
+  </div>
+          <div class='credit-info'>
+            <div class='credit-info-content'>
+              <table class='half-input-table'>
+                <tr><td>Please select your card: </td><td><div class='dropdown' id='card-dropdown'><div class='dropdown-btn' id='current-card'>Visa</div>
+                  <div class='dropdown-select'>
+                  <ul>
+                    <li>Master Card</li>
+                    <li>American Express</li>
+                    </ul></div>
+                  </div>
+                 </td></tr>
+              </table>
+              <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' height='80' class='credit-card-image' id='credit-card-image'></img>
+              Card Number
+              <input class='input-field'></input>
+              Card Holder
+              <input class='input-field'></input>
+              <table class='half-input-table'>
+                <tr>
+                  <td> Expires
+                    <input class='input-field'></input>
+                  </td>
+                  <td>CVC
+                    <input class='input-field'></input>
+                  </td>
+                </tr>
+              </table>
+              <button class='pay-btn'>Pay Now</button>
+  
+            </div>
+  
+          </div>
+        </div>
+  </div>
 {% endblock content %}
