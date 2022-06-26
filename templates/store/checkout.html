@@ -4,63 +4,115 @@
 {% block title %}Checkout{% endblock title %}
 
 {% block content%}
-<div class="card-contain">
-    <div class="CartContainer">
-        <div class="cart-header">
-            <h3 class="cart-heading">Checkout</h3>
-            <h5 class="cart-action">Remove all</h5>
-        </div>
-
-        <div class="cart-items-sub">
-              <div class="image-box">
-                <img src="" alt="">
-              </div>
-              <div class="cart-about">
-                  <h1 class="cart-title">Photography</h1>
-                  <h3 class="cart-subtitle">Flora</h3>
-              </div>
-              <div class="cart-counter">
-                <div class="cart-btn-main">+</div>
-                <div class="cart-count">1</div>
-                <div class="cart-btn-main">-</div>
-              </div>
-              <div class="cart-prices">
-                  <div class="cart-amount">$2.99</div>
-                  <div class="cart-save"><u>Save for later</u></div>
-                  <div class="cart-remove"><u>Remove</u></div>
-              </div>
-        </div>
-
-        <div class="cart-items-sub pad">
-              <div class="image-box">
-                <img src="" alt="">
-              </div>
-              <div class="cart-about">
-                  <h1 class="cart-title">Photography</h1>
-                  <h3 class="cart-subtitle">Beach</h3>
-              </div>
-              <div class="cart-counter">
-                  <div class="cart-btn-main">+</div>
-                  <div class="cart-count">1</div>
-                  <div class="cart-btn-main">-</div>
-              </div>
-              <div class="cart-prices">
-                  <div class="cart-amount">$3.19</div>
-                  <div class="cart-save"><u>Save for later</u></div>
-                  <div class="cart-remove"><u>Remove</u></div>
-              </div>
-        </div>
-      <hr> 
-      <div class="checkout">
-      <div class="main-cart-total">
-          <div>
-              <div class="cart-subtotal">Sub-Total</div>
-              <div class="cart-subtotal-items">2 items</div>
+<div class='container'>
+    <div class='window'>
+      <div class='order-info'>
+        <div class='order-info-content'>
+          <h2>Order Summary</h2>
+                  <div class='line'></div>
+          <table class='order-table'>
+            <tbody>
+              <tr>
+                <td><img src="{% static 'IMG/store/placeholder.jpg' %}" class='full-width'></img>
+                </td>
+                <td>
+                  <br> <span class='thin'>Beach</span>
+                  <br> Playas del Coco<br> 
+                </td>
+  
+              </tr>
+              <tr>
+                <td>
+                  <div class='price'>$2.95</div>
+                </td>
+              </tr>
+            </tbody>
+  
+          </table>
+          <div class='line'></div>
+          <table class='order-table'>
+            <tbody>
+              <tr>
+                <td><img src="https://www.tripsavvy.com/thmb/FwmQ-JvBEBDDlVb-j_zdEo0iVsA=/2048x1152/smart/filters:no_upscale()/beach-5b59c9b7c9e77c004b3e0ff0.jpg" class='full-width'></img>
+                </td>
+                <td>
+                  <br> <span class='thin'>Beach</span>
+                  <br>Playa Ocotal<br> 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class='price'>$5.95</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class='line'></div>
+          <table class='order-table'>
+            <tbody>
+              <tr>
+                <td><img src="https://blogs.hope.edu/boerigter-center/wp-content/uploads/sites/34/2022/04/beach-quotes-1559667853.jpg"class='full-width'></img>
+                </td>
+                <td>
+                  <br> <span class='thin'>Beach</span>
+                  <br>Playa Hermosa<br>
+                </td>
+  
+              </tr>
+              <tr>
+                <td>
+                  <div class='price'>$5.95</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class='line'></div>
+          <div class='checkout-total'>
+            <span style='float:left;'>
+              <div class='thin dense'>Tax 19%</div>
+              <div class='thin dense'>Delivery</div>
+              TOTAL
+            </span>
+            <span style='float:right; text-align:right;'>
+              <div class='thin dense'>$3.75</div>
+              <div class='thin dense'>$4.95</div>
+              $23.55
+            </span>
           </div>
-          <div class="cart-total-amount">$6.18</div>
-      </div>
-      <button class="btn cart-btn btn-primary">Pay Now</button></div>
- </div>
- </div>
-   
+  </div>
+  </div>
+          <div class='credit-info'>
+            <div class='credit-info-content'>
+              <table class='half-input-table'>
+                <tr><td>Please select your card: </td><td><div class='dropdown' id='card-dropdown'><div class='dropdown-btn' id='current-card'>Visa</div>
+                  <div class='dropdown-select'>
+                  <ul>
+                    <li>Master Card</li>
+                    <li>American Express</li>
+                    </ul></div>
+                  </div>
+                 </td></tr>
+              </table>
+              <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' height='80' class='credit-card-image' id='credit-card-image'></img>
+              Card Number
+              <input class='input-field'></input>
+              Card Holder
+              <input class='input-field'></input>
+              <table class='half-input-table'>
+                <tr>
+                  <td> Expires
+                    <input class='input-field'></input>
+                  </td>
+                  <td>CVC
+                    <input class='input-field'></input>
+                  </td>
+                </tr>
+              </table>
+              <button class='pay-btn'>Pay Now</button>
+  
+            </div>
+  
+          </div>
+        </div>
+  </div>
 {% endblock content %}
