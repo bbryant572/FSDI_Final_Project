@@ -60,7 +60,7 @@
 	height: 120px;
 }
 .image-box{
-	width: 85%;
+	max-width: 65%;
 	text-align: center;
 	height: 120px;
 }
