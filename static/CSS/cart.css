@@ -54,8 +54,13 @@
     height: 300px; 
     overflow: hidden;
 }
+.images-done{
+	width: 85%;
+	text-align: center;
+	height: 120px;
+}
 .image-box{
-	width: 15%;
+	width: 85%;
 	text-align: center;
 	height: 120px;
 }
