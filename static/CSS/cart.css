@@ -48,9 +48,21 @@
 	justify-content: space-between;
 	align-items: center;
 }
-.image-box{
-	width: 15%;
+
+.store-items{
+    width: 300px; 
+    height: 300px; 
+    overflow: hidden;
+}
+.images-done{
+	width: 85%;
 	text-align: center;
+	height: 120px;
+}
+.image-box{
+	max-width: 65%;
+	text-align: center;
+	height: 120px;
 }
 .cart-about{
 	height: 100%;
