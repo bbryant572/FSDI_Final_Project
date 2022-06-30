@@ -118,7 +118,7 @@ input{
 }
 
 .user-header{
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.8);
     margin-left: 20%; 
     margin-right: 20%; 
     margin-top: 5%; 
@@ -126,11 +126,25 @@ input{
     color: black; 
     font-size: 20px; 
     margin-bottom: 5%; 
-    align-items: flex-end;
-   
+    display: flex; 
+    flex-direction: row;
+    min-height: 120px;
+    justify-content: space-around;
 }
-.user-image{
-    margin-right: 100%;
-     
-    max-height: 100px; 
+.user-image img{
+    min-height: 100px; 
+    max-height: 300px;
+}
+.username{
+    padding: 2%;
+    padding-top: 6%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.user-main{
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-left: 20%; 
+    margin-right: 20%; 
+    margin-top: 5%;
+    padding: 1%; 
+    margin-bottom: 12%;
 }
